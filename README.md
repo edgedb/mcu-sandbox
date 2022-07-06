@@ -1,6 +1,8 @@
-# The EdgeDB MCU sandbox
+# The EdgeDB MCU sandbox 🦹
 
-This is a sandbox for playing with EdgeDB and the EdgeQL query builder. It includes a simple movie database schema (`dbschema/default.esdl`) and a sample dataset (`seed.ts`) containing the movies/shows in the Marvel Cinematic Universe.
+This is a sandbox for playing with EdgeDB and the EdgeQL query builder.
+
+It includes a simple movie database schema (`dbschema/default.esdl`) and a sample dataset (`seed.ts`) containing the movies and shows in the Marvel Cinematic Universe (last update: July 2022).
 
 ## Setup
 
@@ -17,8 +19,8 @@ $ iwr https://ps1.edgedb.com -useb | iex
 #### 2. Clone the repo
 
 ```bash
-git clone git@github.com:edgedb/mcu-sandbox.git
-cd mcu-sandbox
+$ git clone git@github.com:edgedb/mcu-sandbox.git
+$ cd mcu-sandbox
 ```
 
 #### 3. Initialize the EdgeDB project
@@ -27,17 +29,15 @@ cd mcu-sandbox
 edgedb project init
 ```
 
-Then follow the prompts. This step spins up a local EdgeDB instance and apply all the migrations inside `dbschema/migrations`.
-
-After the project is initialized, all EdgeDB clients initialized inside the project directory will connect to the newly-created instance automatically—no need for environment variables or hard-coded configuration. ([Read more about projects here.](https://www.edgedb.com/docs/guides/projects))
+Then follow the prompts. This step spins up a local EdgeDB instance and applies the migrations inside `dbschema/migrations`.
 
 #### 4. Setup project
 
 ```bash
-npm run setup
+$ npm run setup
 ```
 
-The `setup` script is an alias for the following steps, which you can optionally run individually.
+Alternatively, you can run each of these commands individually:
 
 ```bash
 $ npm install
@@ -47,22 +47,13 @@ $ npx esr seed.ts
 
 ### 5. Start writing queries!
 
-Start writing some queries in `script.ts`! Then execute it like so:
+Write a query in `script.ts` and execute it like so:
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 
-This starts a watcher, so every time you save `script.ts`, the script will be re-run automatically.
-
-## Playing with the project
-
-The sandbox is a simple project designed to showcase the query builder.
-
-- `script.ts` - a simple script you can update to play with the query builder
-- `dbschema/default.esdl` - the schema file
-- `dbschema/migrations` - the migrations directory
-- `dbschema/edgeql-js` - the default location of the generated query builder
+This starts a watcher, so every time you update and save `script.ts`, the script will be re-run.
 
 ## Evolving the schema
 
@@ -71,3 +62,12 @@ The sandbox is a simple project designed to showcase the query builder.
 3. Follow the interactive prompts
 4. Apply the migration with `edgedb migrate`
 5. Regenerate the query builder with `npx edgeql-js`
+
+## File structure
+
+The sandbox is a simple project designed to showcase the query builder.
+
+- `script.ts` - a simple script you can update to play with the query builder
+- `dbschema/default.esdl` - the schema file
+- `dbschema/migrations` - the migrations directory
+- `dbschema/edgeql-js` - the default location of the generated query builder
