@@ -45,7 +45,7 @@ $ npx edgeql-js
 $ npx esr seed.ts
 ```
 
-### 5. Start writing queries!
+#### 5. Start writing queries!
 
 Write a query in `script.ts` and execute it like so:
 
