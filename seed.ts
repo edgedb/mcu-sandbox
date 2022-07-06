@@ -488,9 +488,9 @@ async function run() {
       }
     }
 
-    console.log(`Creating Account colinhacks...`);
+    console.log(`Creating Account testuser...`);
     const createAccount = e.insert(e.Account, {
-      username: 'colinhacks',
+      username: 'testuser',
       watchlist: e.select(e.Content, (content) => ({
         filter: e.op(
           content.title,

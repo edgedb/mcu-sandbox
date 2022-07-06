@@ -17,8 +17,8 @@ $ iwr https://ps1.edgedb.com -useb | iex
 #### 2. Clone the repo
 
 ```bash
-git clone git@github.com:colinhacks/edgedb-movies.git
-cd edgedb-movies
+git clone git@github.com:edgedb/mcu-sandbox.git
+cd mcu-sandbox
 ```
 
 #### 3. Initialize the EdgeDB project
