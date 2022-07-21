@@ -14,7 +14,7 @@
   "author": "Colin McDonnell",
   "license": "ISC",
   "dependencies": {
-    "edgedb": "^0.20.7"
+    "edgedb": "^0.21.0"
   },
   "engines": {
     "node": ">=14.0.0"
