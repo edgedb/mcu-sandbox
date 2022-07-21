@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -e ts -x 'npx esr script.ts'",
-    "seed": "npx esr seed.ts",
-    "setup": "npm i && npx edgeql-js --force-overwrite && npx esr seed.ts",
+    "dev": "nodemon -e ts -x 'npx tsx script.ts'",
+    "seed": "npx tsx seed.ts",
+    "setup": "npm i && npx edgeql-js --force-overwrite && npx tsx seed.ts",
     "build": "tsc --incremental"
   },
   "keywords": [],
@@ -24,8 +24,6 @@
     "@types/node": "^17.0.16",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
-    "esbuild": "^0.14.48",
-    "esbuild-runner": "^2.2.1",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -33,6 +31,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
+    "tsx": "^3.8.0",
     "typescript": "^4.6.2"
   }
 }

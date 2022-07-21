@@ -42,7 +42,7 @@ Alternatively, you can run each of these commands individually:
 ```bash
 $ npm install
 $ npx edgeql-js
-$ npx esr seed.ts
+$ npx tsx seed.ts
 ```
 
 #### 5. Start writing queries!
