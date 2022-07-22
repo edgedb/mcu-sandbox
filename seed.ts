@@ -488,25 +488,12 @@ async function run() {
       }
     }
 
-    console.log(`Creating Account testuser...`);
-    const createAccount = e.insert(e.Account, {
-      username: 'testuser',
-      watchlist: e.select(e.Content, (content) => ({
-        filter: e.op(
-          content.title,
-          'in',
-          e.set(
-            'Moon Knight',
-            'Avengers: Endgame',
-            'Eternals',
-            'Spider-Man: No Way Home'
-          )
-        ),
-      })),
+    console.log(`Creating franchise Marvel Cinematic Universe...`);
+    const newFranchise = e.insert(e.Franchise, {
+      name: 'Marvel Cinematic Universe',
+      entries: e.Content, // add all content
     });
-    await e
-      .select(createAccount, () => ({id: true, username: true}))
-      .run(client);
+    await e.select(newFranchise, () => ({id: true, name: true})).run(client);
   } catch (err) {
     console.log(err);
   }

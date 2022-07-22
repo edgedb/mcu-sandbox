@@ -2,11 +2,9 @@ using extension graphql;
 
 module default {
 
-  type Account {
-    required property username -> str {
-      constraint exclusive;
-    };
-    multi link watchlist -> Content;
+  type Franchise {
+    required property name -> str;
+    multi link entries -> Content;
   }
 
   abstract type Content {

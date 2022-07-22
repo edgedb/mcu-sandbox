@@ -34,15 +34,9 @@ Then follow the prompts. This step spins up a local EdgeDB instance and applies 
 #### 4. Setup project
 
 ```bash
-$ npm run setup
-```
-
-Alternatively, you can run each of these commands individually:
-
-```bash
-$ npm install
-$ npx edgeql-js
-$ npx tsx seed.ts
+$ npm install           # install dependencies
+$ npx edgeql-js         # generate query builder
+$ npx tsx seed.ts       # seed the database
 ```
 
 #### 5. Start writing queries!
