@@ -1,19 +1,24 @@
 import {createClient} from 'edgedb';
 import e from './dbschema/edgeql-js';
 
-const client = createClient({});
+const client = createClient();
 
 async function run() {
-  const query = e.select(e.Movie, (movie) => ({
-    title: true,
-    release_year: true,
-    cast_size: e.count(movie.actors),
-    filter: e.op(movie.title, 'ilike', '%avengers%'),
-    order_by: movie.release_year,
+  console.log(`run`);
+  const query = e.select(e.Person, (p) => ({
+    id: true,
+    movies: p['<actors'].is(e.Movie),
   }));
+
+  /* {
+    title: string;
+    release_year: number | null;
+    num_seasons: number | null;
+  }[] */
 
   const result = await query.run(client);
   console.log(result);
+  console.log('done');
 }
 
 run();
